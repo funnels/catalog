@@ -1,0 +1,18 @@
+$box-bg: 										$white;
+$box-border-radius: 				2px;
+
+
+.box {
+	padding: 22px 20px;
+	background-color: $box-bg;
+	border-radius: $box-border-radius;
+
+	@include distancing(2rem, bottom);
+}
+
+.box-material {
+	padding: 26px 28px;
+	background-color: $box-bg;
+	box-shadow: 0 1px 3px rgba(24,24,24,.25);
+	border-radius: $box-border-radius;
+}

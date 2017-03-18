@@ -1,0 +1,92 @@
+$dropdown-border-color: 		#c2c2c2;
+
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+	z-index: 100;
+
+	[class^=icon]:first-child {
+		vertical-align: middle;
+		margin-right: 4px;
+	}
+
+	.trigger {
+		display: block;
+		cursor: pointer;
+		position: relative;
+		padding-right: 20px;
+	}
+
+	.value {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.icon-arrow-right {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transition: transform .2s ease;
+	}
+
+	ul.values {
+		position: absolute;
+		top: calc(100% + 4px);
+		@include list-reset();
+		margin-top: 0;
+		margin-bottom: 0;
+		visibility: hidden;
+		white-space: nowrap;
+		transition: opacity .2s ease, visibility .2s ease;
+		opacity: 0;
+		border: 1px solid $dropdown-border-color;
+		background-color: $white;
+		border-radius: 2px;
+
+		li {
+			padding: 5px 10px;
+			transition: background-color .2s ease;
+			cursor: pointer;
+
+			+ li {
+				margin-top: 0;
+			}
+
+			&:hover {
+				background-color: $bg;
+			}
+		}
+	}
+
+	&._open {
+		z-index: 100;
+
+		.trigger {
+			
+		}
+		
+		.icon-arrow-right {
+			@include rotate(-180deg);
+		}
+
+		> ul {
+			opacity:1;
+			visibility: visible;
+		}
+	}
+
+	&._location {
+		margin-top: 20px;
+
+		@media (min-width: $screen-sm-min) {
+			margin-top: 0;
+			position: absolute;
+			top: 45px;
+			left: $grid-gutter-width/2 +259px;
+		}
+
+		@media (min-width: $screen-md-min) {
+		}
+	}
+}

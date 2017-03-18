@@ -1,0 +1,32 @@
+// base
+@import 'base/fonts';
+@import 'base/mixins';
+@import 'base/variables'; 
+
+// libs
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import 'base/variables-bootstrap'; // redefine bootstrap variables
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/grid';
+// @import '../lib/slick-carousel/slick/slick.scss';
+// @import '../lib/magnific-popup/dist/magnific-popup.scss';
+
+// base
+@import 'base/type';
+@import 'base/carcass';
+
+// components
+@import 'components/button';
+@import 'components/icons-sprite'; // generated automatically, do not edit
+@import 'components/icons';
+@import 'components/shortcut';
+@import 'components/form';
+@import 'components/box';
+@import 'components/dropdown';
+@import 'components/grid';
+@import 'components/button';
+@import 'components/count';

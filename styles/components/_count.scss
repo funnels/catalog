@@ -1,0 +1,20 @@
+$count-value-color: 			$accent;
+
+
+.count {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	.value {
+		color: $count-value-color;
+		font-size: 3rem;
+		line-height: 3.3rem;
+		font-weight: bold;
+	}
+
+	.title {
+		margin-top: 4px;
+		line-height: 1.8rem;
+	}
+}

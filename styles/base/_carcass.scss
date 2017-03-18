@@ -1,0 +1,161 @@
+$header-bg: 						$white;
+$footer-bg: 						$major;
+$footer-text-color: 		$white;
+
+
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: $rem-size;
+}
+
+body {
+	margin: 0;
+	font-family: $font-main;
+	color: $major;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: $base-font-weight;
+	background-color: $bg;
+}
+
+.wrap {
+	overflow: hidden;
+}
+
+.container-fluid,
+.container {
+  max-width: 1020px;
+  position: relative;
+}
+
+.site-header {
+	background-color: $header-bg;
+	z-index: 10;
+	height: auto;
+
+	> .container {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		height: 105px;
+	}
+
+	@media (min-width: $screen-md-min) {
+	}
+}
+
+.site-logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 0;
+
+	img {
+		display: block;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		position: absolute;
+		top: 36px;
+		left: $grid-gutter-width/2;
+		
+	}
+
+	@media (min-width: $screen-md-min) {
+		top: 36px;
+		left: $grid-gutter-width/2;
+	}
+}
+
+.site-phone {
+	font-size: 2rem;
+	line-height: 2rem;
+	color: $heading;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: absolute;
+	top: 80px;
+	right: $grid-gutter-width/2;
+	
+
+	@media (min-width: $screen-sm-min) {
+		position: absolute;
+		top: 40px;
+	}
+
+	@media (min-width: $screen-md-min) {
+
+	}
+}
+
+.content-area {
+	padding-top: 31px;
+	padding-bottom: 56px;	
+}
+
+.site-footer {
+	background-color: $footer-bg;
+	color: $footer-text-color;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+
+	> .container {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	a, h4 {
+		color: $white;
+	}
+
+	h4 {
+		font-weight: 300;
+	}
+
+}
+
+.footer-nav {
+	$margin: 9px;
+
+	cursor: default;
+	white-space: nowrap;
+	margin-left: -$margin;
+
+	li {
+		display: inline-block;
+		margin-left: $margin;
+		margin-left: $margin;
+	}
+
+	a {
+	}
+}
+
+.footer-catalog-menu {
+	margin-top: 20px;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.footer-subinfo {
+	margin-top: 0;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+}

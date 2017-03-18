@@ -1,0 +1,65 @@
+$input-border-color: 				#c2c2c2;
+$input-border-radius: 			2px;
+$input-text-color: 					$major;
+
+
+input[type=text],
+input[type=email],
+input[type=search],
+input[type=tel],
+input[type=password],
+input[type=number] {
+	width: 100%;
+	padding: 12px 19px;
+	border: 1px solid $input-border-color;
+	color: $input-text-color;
+	font-size: inherit;
+	line-height: 1.9rem;
+	font-weight: inherit;
+	border-radius: $input-border-radius;
+	background-color: $white;
+	@include placeholder($major);
+
+	&:focus {
+		outline: none;
+	}
+}
+
+select {
+	width: 100%;
+	padding: 12px 19px;
+	background-color: $white;
+	border: 1px solid $input-border-color;
+	border-radius: $input-border-radius;
+	color: $input-text-color;
+	font-size: inherit;
+	line-height: 1.9rem;
+	font-weight: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+input.input-filter {
+	padding-right: 44px;
+	background: url(../images/icons/magnifier.png) no-repeat calc(100% - 13px) 50%;
+}
+
+select.select-filter {
+	padding-right: 44px;
+	background: url(../images/icons/select-arrow.png) no-repeat calc(100% - 13px) 50%;
+}
+
+input.input-name {
+	padding-left: 41px;
+	background: url(../images/icons/user.png) no-repeat 9px 50%;
+}
+
+input.input-phone {
+	padding-left: 41px;
+	background: url(../images/icons/phone.png) no-repeat 9px 50%;
+}

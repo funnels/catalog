@@ -1,0 +1,164 @@
+$link-color: 						$brand;
+$heading-color: 				$heading;
+
+
+a {
+	color: $link-color;
+	text-decoration: underline;
+	transition: color .2s ease;
+
+	&:hover {
+		color: $link-color;
+		text-decoration: none;
+	}
+}
+
+p {
+	@include distancing(1.7rem, top);
+	@include distancing(3rem !important, top, '.row');
+	@include distancing(1.7rem, bottom);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $heading;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 3rem;
+
+	@include distancing(3.4rem !important, top);
+	@include distancing(2rem, bottom);
+}
+
+h2 {
+	font-size: 2.5rem;
+	line-height: 2.7rem;
+	text-transform: uppercase;
+
+	@include distancing(3.4rem !important, top);
+	@include distancing(2rem, bottom);
+}
+
+h3 {
+	font-size: 2.1rem;
+	line-height: 2.4rem;
+	text-transform: uppercase;
+
+	@include distancing(3.4rem !important, top);
+	@include distancing(2rem, bottom);
+}
+
+h4 {
+	font-size: 1.6rem;
+	line-height: 2rem;
+	text-transform: uppercase;
+
+	@include distancing(2.5rem !important, top);
+	@include distancing(.8rem, bottom);
+	@include distancing(.8rem, bottom, '.simple-list');
+}
+
+h5 {
+	font-size: 1.5rem;
+	line-height: 1.9rem;
+	text-transform: uppercase;
+	
+	@include distancing(2.5rem !important, top);
+	@include distancing(.8rem, bottom);
+}
+
+h6 {
+	font-size: 1.3rem;
+	line-height: 1.6rem;
+	text-transform: uppercase;
+	
+	@include distancing(2.5rem !important, top);
+	@include distancing(.8rem, bottom);
+}
+
+
+// nearby headings
+@for $i from 1 through 6 {
+  h#{$i} {
+		@for $ii from 1 through 6 {
+  		+ h#{$ii} {
+				margin-top: .8rem !important;
+			}
+  	}
+  }
+}
+
+.subheader {
+	@include distancing(.2rem !important, top);
+	@include distancing(2rem, bottom);
+	@include distancing(3rem, bottom, '.box');
+}
+
+.color-brand {
+	color: $brand;
+}
+
+.color-accent {
+	color: $accent;
+}
+
+.text-sm {
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+}
+
+.text-lg {
+	font-size: 1.6rem;
+	line-height: 2rem;	
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+ul,
+ol,
+.list-simple {
+	@include list-reset();
+
+	@include distancing(1rem, top);
+	@include distancing(4rem !important, top, '.row');
+	@include distancing(1rem, bottom);
+
+	li + li {
+		margin-top: 4px;
+	}
+}
+
+.list-inline {
+	@include list-reset();
+
+	li {
+		display: inline;
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+
+	@include distancing(1rem, top);
+	@include distancing(4rem !important, top, '.row');
+	@include distancing(1rem, bottom);
+}
+
+
+hr {
+	border: solid #c2c2c2;
+	border-width: 1px 0 0;
+
+	@include distancing(3.5rem !important, top);
+	@include distancing(3.5rem !important, bottom);
+}

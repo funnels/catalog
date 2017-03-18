@@ -1,0 +1,27 @@
+$button-color: 					$brand;
+$button-text-color: 		$white;
+$button-border-radius: 	2px;
+
+
+.btn {
+	width: 100%;
+	padding: 10px 20px;
+	background-color: $button-color;
+	border: 0 none;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $button-text-color;
+	border-radius: $button-border-radius;
+	cursor: pointer;
+	transition: background-color .2s ease;
+
+	&:hover {
+		background-color: darken($button-color, 5);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}

@@ -5,7 +5,6 @@ $heading-color: 				$heading;
 a {
 	color: $link-color;
 	text-decoration: underline;
-	transition: color .2s ease;
 
 	&:hover {
 		color: $link-color;
@@ -13,9 +12,24 @@ a {
 	}
 }
 
+.links-as-text {
+	cursor: default;
+	
+	a {
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			color: $link-color;
+			text-decoration: underline;
+		}
+	}
+}
+
 p {
 	@include distancing(1.7rem, top);
 	@include distancing(3rem !important, top, '.row');
+	@include distancing(3rem !important, top, '.list-steps');
 	@include distancing(1.7rem, bottom);
 }
 
@@ -57,7 +71,6 @@ h4 {
 
 	@include distancing(2.5rem !important, top);
 	@include distancing(.8rem, bottom);
-	@include distancing(.8rem, bottom, '.simple-list');
 }
 
 h5 {
@@ -93,7 +106,7 @@ h6 {
 .subheader {
 	@include distancing(.2rem !important, top);
 	@include distancing(2rem, bottom);
-	@include distancing(3rem, bottom, '.box');
+	@include distancing(2.8rem, bottom, '.box');
 }
 
 .color-brand {

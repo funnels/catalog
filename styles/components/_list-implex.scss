@@ -1,0 +1,41 @@
+ul.list-implex {
+	@include list-reset();
+	@include make-row();
+
+	> li {
+		@include make-xs-column(12)
+		@include make-sm-column(7)
+		@include make-sm-column-offset(1)
+		@include make-md-column(6)
+
+		&:nth-child(3n+1){
+			@include make-md-column-offset(1)
+		}
+		&:nth-child(3n+2){
+			@include make-md-column-offset(3)
+		}
+		&:nth-child(3n){
+			@include make-md-column-offset(2)
+		}
+		
+		@media (max-width: $screen-xs-max){
+
+			&:nth-child(-n+2) {
+				margin-top: 0;
+			}
+			&:nth-child(n+3) {
+				margin-top: 2.5rem;
+			}
+		}
+
+		@media (min-width: $screen-sm-min){
+
+			&:nth-child(-n+3) {
+				margin-top: 0;
+			}
+			&:nth-child(n+4) {
+				margin-top: 2.5rem;
+			}
+		}
+	}
+}

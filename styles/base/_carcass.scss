@@ -52,6 +52,7 @@ body {
 	}
 
 	@media (min-width: $screen-md-min) {
+
 	}
 }
 
@@ -69,7 +70,6 @@ body {
 		position: absolute;
 		top: 36px;
 		left: $grid-gutter-width/2;
-		
 	}
 
 	@media (min-width: $screen-md-min) {
@@ -87,7 +87,6 @@ body {
 	position: absolute;
 	top: 80px;
 	right: $grid-gutter-width/2;
-	
 
 	@media (min-width: $screen-sm-min) {
 		position: absolute;
@@ -128,8 +127,8 @@ body {
 .footer-nav {
 	$margin: 9px;
 
+	line-height: 1.8rem;
 	cursor: default;
-	white-space: nowrap;
 	margin-left: -$margin;
 
 	li {
@@ -139,11 +138,12 @@ body {
 	}
 
 	a {
+		
 	}
 }
 
 .footer-catalog-menu {
-	margin-top: 20px;
+	margin-top: 34px;
 
 	a {
 		text-decoration: none;
@@ -152,10 +152,84 @@ body {
 			text-decoration: underline;
 		}
 	}
+
+	> ul {
+		@include list-reset();
+		@include make-row();
+
+		> li {
+			@include make-xs-column(24);
+			@include make-sm-column(8);
+		}
+	}
+	
+	@media (max-width: $screen-xs-max){
+		> ul > li + li {
+			margin-top: 2.3rem;
+		}
+	}
+}
+
+.footer-sharing {
+	@include make-row(12px);
+
+	.title {
+		@include make-sm-column(13, 12px);
+		margin-bottom: 8px;
+	}
+
+	ul {
+		@include list-reset();
+		@include make-sm-column(11, 12px);
+		margin-top: 0;
+
+		li + li {
+			margin-top: 7px;
+		}
+	}
+
+	[class*=icon-]{
+		vertical-align: middle;
+		margin-top: -1px;
+		margin-right: 7px;
+	}
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		white-space: nowrap;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@media (max-width: $screen-xs-max){
+		margin-top: 2.2rem;
+	}
+
+	@media (min-width: $screen-sm-min){
+		.title {
+			text-align: right;
+		}
+	}
+
+	@media (min-width: $screen-md-min){
+		.title {
+			padding-top: 8px;
+		}
+	}
+
+	@media (min-width: $screen-lg-min){
+		.title {
+		}
+	}
 }
 
 .footer-subinfo {
 	margin-top: 0;
 	font-size: 1.2rem;
 	line-height: 1.6rem;
+	text-align: right;
+	@include distancing(3rem, top);
 }

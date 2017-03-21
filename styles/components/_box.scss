@@ -3,11 +3,15 @@ $box-border-radius: 				2px;
 
 
 .box {
-	padding: 22px 20px;
+	padding: 28px 28px;
 	background-color: $box-bg;
 	border-radius: $box-border-radius;
 
 	@include distancing(2rem, bottom);
+
+	&._slim {
+		padding: 22px 20px;
+	}
 }
 
 .box-material {

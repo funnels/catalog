@@ -1,0 +1,106 @@
+ol.list-steps {
+	@include make-row();
+	counter-reset: steps-counter;
+	text-align: center;
+
+  li {
+    position: relative;
+
+	  @include make-xs-column(24);
+    @include make-sm-column(12);
+    @include make-md-column(8);
+
+    +li {
+    	margin-top: 9rem;
+    	
+    	&:before {
+    		content: '';
+    		display: block;
+    		background-image: url(../images/icons-sprite.png);
+			  background-position: 0px 0px;
+			  width: 50px;
+			  height: 16px;
+			  position: absolute;
+			  top: -55px;
+			  left: 50%;
+			  transform: rotate(90deg) translateY(25px);
+    	}
+    }
+  }
+
+	@media (min-width: $screen-sm-min) {
+		li {
+			
+			&:nth-child(3) {
+				margin-top: 30px;
+				@include make-sm-column-offset(7);
+    	}
+
+			+ li {
+				margin-top: 0;
+				
+				&:before {
+					top: 60px;
+				  left: -25px;
+				  transform: none;
+				}
+			}
+
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		li {
+
+			&:nth-child(3) {
+				margin-top: 0;
+				@include make-md-column-offset(0);
+	  	}
+
+		}
+	}
+}
+
+.step-image {
+	margin-bottom: 17px;
+
+	img {
+		vertical-align: bottom;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		text-align: center;
+		line-height: 110px;
+		font-size: 0;
+		height: 110px;
+	}
+
+	@media (min-width: $screen-md-min) {
+
+	}
+}
+
+.step-description {
+	padding-left: 45px;
+	position: relative;
+	line-height: 1.7rem;
+	display: inline-block;
+	text-align: left;
+	max-width: 300px;
+
+	&:before {
+		@include pseudo-block(28px);
+		left: 10px;
+		top: 2px;
+		padding-top: 4px;
+		content: counter(steps-counter);
+		counter-increment: steps-counter;
+		border-radius: 28px;
+		background-color: $accent;
+		color: $white;
+		font-size: 2rem;
+		line-height: 2rem;
+		font-weight: bold;
+		text-align: center;
+	}
+}

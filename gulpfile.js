@@ -13,6 +13,7 @@ gulp.task('server', function() {
 
   browserSync.init({
     server: "./",
+    host: "192.168.1.3",
 		ui: false,
 		notify: false,
 		logLevel: 'debug',

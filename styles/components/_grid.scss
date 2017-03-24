@@ -1,5 +1,6 @@
 $grid-gutter-xs: 			14px;
 $grid-gutter-sm: 			20px;
+$grid-gutter-lg: 			70px;
 
 
 .row {
@@ -24,4 +25,24 @@ $grid-gutter-sm: 			20px;
 		}
 	}
 	
+	&._gutter-lg {
+  	margin-right: -$grid-gutter-lg/2;
+  	margin-left: -$grid-gutter-lg/2;
+
+		> [class*=col-] {
+			padding-right: $grid-gutter-lg/2;
+			padding-left: $grid-gutter-lg/2;
+		}
+	}
+
+	&._bordered {
+		> [class*=col-] {
+			border-right: 1px solid $border;
+			
+			&:last-child {
+				border-right: 0;
+			}
+		}
+	}
+
 }

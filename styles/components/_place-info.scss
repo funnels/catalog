@@ -1,0 +1,21 @@
+$place-info-bg: 									$white;
+$place-info-border-radius: 			2px;
+
+
+.place-info {
+	padding: 15px 20px;
+	background-color: $place-info-bg;
+	border-radius: $place-info-border-radius;
+
+	h4 {
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-bottom: 2px;
+		margin-left: -20px;
+		margin-right: -20px;
+		border-bottom: 1px solid $border;
+		margin-bottom: 1.6rem;
+		margin-top: 1.8rem !important;
+	}
+
+}

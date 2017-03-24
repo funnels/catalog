@@ -1,0 +1,45 @@
+$bg-exclamation: 								$brand;
+$bg-exclamation-tip: 						$accent;
+
+
+.alert {
+	background-color: #fff;
+	position: relative;
+	min-height: 55px;
+	padding: 5px 10px 5px 84px;
+
+	.tip {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 53px;
+
+		&:after {
+			@include pseudo-block(32px, 27px);
+			top: 14px;
+			right: -16px;
+			transform: rotate(60deg) skew(30deg);
+		}
+
+		[class^=icon] {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+}
+
+.alert-exclamation {
+	background-color: $bg-exclamation;
+	color: $white;
+
+	.tip {
+		background-color: $bg-exclamation-tip;
+
+		&:after {
+			background-color: $bg-exclamation-tip;
+		}
+	}
+}

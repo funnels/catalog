@@ -1,0 +1,33 @@
+$star-fill-default: 				$major;
+$star-fill-active: 					$accent;
+
+
+.rating {
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+
+	.icon-star {
+		fill: $star-fill-default;
+		vertical-align: middle;
+
+		&._active {
+			fill: $star-fill-active	;
+		}
+	}
+}
+
+.rating-word {
+	font-weight: bold;
+	color: $accent;
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+	vertical-align: middle;
+	display: inline-block;
+
+	.icon-star + & {
+		margin-left: 8px;
+		position: relative;
+		top: 1px;
+	}
+}

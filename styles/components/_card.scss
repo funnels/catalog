@@ -1,0 +1,103 @@
+$phone-color: 												$intense;
+$card-border-radius: 									2px;
+
+
+.card {
+	@include make-row();
+	padding-top: 14px;
+	padding-bottom: 27px;
+
+	.look {
+		@include make-sm-column(7);
+		@include make-sm-column-offset(1);
+		text-align: center;
+	}
+
+	.description {
+		@include make-sm-column(16);
+		padding-top: 2px;
+	}
+}
+
+.appointment-wrap {
+	padding-top: 25px;
+	padding-bottom: 20px;
+
+	.phone {
+		margin-top: 31px;
+	}
+
+	.btn {
+		margin-top: 19px;
+	}
+}
+
+.card-xs {
+	padding: 20px 20px 18px;
+	background-color: $white;
+	box-shadow: 0 1px 3px rgba(24,24,24,.25);
+	border-radius: $card-border-radius;
+	font-size: 1.3rem;
+	line-height: 1.5rem;
+	@include distancing(1.5rem, bottom);
+
+	> .inner {
+		@include make-row(12px);
+	}
+
+	.look {
+		@include make-xs-column(10, 12px);
+		text-align: center;
+	}
+	.description {
+		@include make-xs-column(14, 12px);
+	}
+
+	.rating {
+		.icon-star {
+			width: 13px;
+			height: 12px;
+		}
+	}
+
+	.price {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		font-weight: bold;
+		color: $heading;
+	}
+
+	h4 {
+		color: $brand;
+		text-transform: none;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	h6 {
+		text-transform: none;
+	}
+
+	p+p {
+		margin-top: .6rem;
+	}
+
+	.card-footer {
+		margin-top: 15px;
+		border-top: 1px solid $border;
+		margin-left: -20px;
+		margin-right: -20px;
+		padding: 12px 20px 0;
+		text-align: center;
+	}
+
+	.metro-list-xs {
+		margin-top: 1px;
+	}
+}

@@ -29,35 +29,28 @@ ol.list-steps {
   }
 
 	@media (min-width: $screen-sm-min) {
-		li {
+		li + li {
+			margin-top: 0;
 			
-			&:nth-child(3) {
-				margin-top: 30px;
-				@include make-sm-column-offset(7);
-    	}
-
-			+ li {
-				margin-top: 0;
-				
-				&:before {
-					top: 60px;
-				  left: -25px;
-				  transform: none;
-				}
+			&:before {
+				top: 60px;
+			  left: -25px;
+			  transform: none;
 			}
-
 		}
 	}
 
-	@media (min-width: $screen-md-min) {
-		li {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		li:nth-child(3) {
+			margin-top: 45px;
+			@include make-sm-column-offset(7);
 
-			&:nth-child(3) {
-				margin-top: 0;
-				@include make-md-column-offset(0);
-	  	}
-
-		}
+			&:before {
+				top: 0px;
+				left: 50%;
+				transform: rotate(135deg) translateY(-35px) translateX(-45px);
+			}
+  	}
 	}
 }
 

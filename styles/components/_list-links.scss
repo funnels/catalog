@@ -1,0 +1,41 @@
+.list-links {
+	font-size: 1.4rem;
+
+	h4 {
+		color: #555;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		text-transform: none;
+		margin-top: 1rem !important;
+
+		&:first-child {
+			margin-top: 0 !important;
+		}
+	}
+
+	ul {
+		margin-top: 0.6rem !important;
+
+		&:first-child {
+			margin-top: 0 !important;
+		}
+	}
+
+	.show-all {
+		margin-top: 4px;
+		text-align: center;
+
+		a {
+			position: relative;
+			padding-right: 10px;
+		}
+
+		[class^=icon] {
+			position: absolute;
+			width: 5px;
+			right: 0;
+			top: 0;
+			fill: $brand;
+		}
+	}
+}

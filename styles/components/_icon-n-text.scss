@@ -1,0 +1,27 @@
+.icon-n-text {
+	display: inline-block;
+	white-space: nowrap;
+
+	> [class^=icon] {
+		vertical-align: middle;
+		display: inline-block;
+
+		+ .text {
+			margin-left: 3px;
+		}
+	}
+
+	> .text {
+		white-space: normal;
+		vertical-align: middle;
+		display: inline-block;
+		line-height: 1.6rem;
+	}
+
+	&._icon-top {
+		> [class^=icon] {
+			vertical-align: top;
+			margin-top: -2px;
+		}
+	}
+}

@@ -1,4 +1,5 @@
 $header-bg: 						$white;
+$pre-footer-bg: 				#f5f5f5;
 $footer-bg: 						$major;
 $footer-text-color: 		$white;
 
@@ -11,6 +12,10 @@ $footer-text-color: 		$white;
 *:before,
 *:after {
 	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
 }
 
 html {
@@ -103,6 +108,13 @@ body {
 	padding-bottom: 56px;	
 }
 
+.pre-footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: $pre-footer-bg;
+	margin-top: -36px;
+}
+
 .site-footer {
 	background-color: $footer-bg;
 	color: $footer-text-color;
@@ -111,7 +123,7 @@ body {
 
 	> .container {
 		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-bottom: 40px;
 	}
 
 	a, h4 {

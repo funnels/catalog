@@ -1,6 +1,5 @@
 $link-color: 						$brand;
-$heading-color: 				$heading;
-
+$heading: 							$intense;
 
 a {
 	color: $link-color;
@@ -31,6 +30,7 @@ p {
 	@include distancing(3rem !important, top, '.row');
 	@include distancing(3rem !important, top, '.list-steps');
 	@include distancing(1.7rem, bottom);
+	@include distancing(1rem, bottom, 'p');
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,8 +42,8 @@ h1 {
 	font-size: 3rem;
 	line-height: 3rem;
 
-	@include distancing(3.4rem !important, top);
-	@include distancing(2rem, bottom);
+	@include distancing(2rem !important, top);
+	@include distancing(1.6rem, bottom);
 }
 
 h2 {
@@ -71,6 +71,11 @@ h4 {
 
 	@include distancing(2.5rem !important, top);
 	@include distancing(.8rem, bottom);
+
+	@media (min-width: $screen-sm-min){
+		font-size: 1.6rem;
+		line-height: 2rem;
+	}
 }
 
 h5 {
@@ -80,6 +85,14 @@ h5 {
 	
 	@include distancing(2.5rem !important, top);
 	@include distancing(.8rem, bottom);
+
+	&.heading-alternative {
+		font-size: 1.7rem;
+	}
+}
+
+.heading-alternative {
+	text-transform: none;
 }
 
 h6 {
@@ -87,15 +100,15 @@ h6 {
 	line-height: 1.6rem;
 	text-transform: uppercase;
 	
-	@include distancing(2.5rem !important, top);
-	@include distancing(.8rem, bottom);
+	// @include distancing(2.5rem !important, top);
+	@include distancing(0, bottom);
 }
 
 
 // nearby headings
-@for $i from 1 through 6 {
+@for $i from 1 through 5 {
   h#{$i} {
-		@for $ii from 1 through 6 {
+		@for $ii from 1 through 5 {
   		+ h#{$ii} {
 				margin-top: .8rem !important;
 			}
@@ -117,14 +130,24 @@ h6 {
 	color: $accent;
 }
 
+.text-xs {
+	font-size: 1.1rem;
+	line-height: 1.3rem;
+}
+
 .text-sm {
 	font-size: 1.4rem;
 	line-height: 1.8rem;
 }
 
 .text-lg {
-	font-size: 1.6rem;
-	line-height: 2rem;	
+	font-size: 2.8rem;
+	line-height: 2.8rem;
+}
+
+.text-xl {
+	font-size: 2.8rem;
+	line-height: 2.8rem;
 }
 
 .text-left {
@@ -137,6 +160,10 @@ h6 {
 
 .text-center {
   text-align: center;
+}
+
+.text-upper {
+	text-transform: uppercase;
 }
 
 ul,
@@ -174,4 +201,23 @@ hr {
 
 	@include distancing(3.5rem !important, top);
 	@include distancing(3.5rem !important, bottom);
+
+	&.indent-sm {
+		@include distancing(2rem !important, top);
+		@include distancing(2rem !important, bottom);
+	}
+}
+
+dl {
+	dt {
+		font-weight: bold;
+		margin-top: 5px;
+		
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	dd {
+		margin-left: 20px;
+	}
 }

@@ -1,4 +1,4 @@
-$input-border-color: 				#c2c2c2;
+$input-border-color: 				$border;
 $input-border-radius: 			2px;
 $input-text-color: 					$major;
 
@@ -65,4 +65,9 @@ input.input-phone {
 	.form-field {
 		@include distancing(1.2rem, top, '.form-field');
 	}
+}
+
+.form-search {
+	@include distancing(2rem, bottom);
+	@include distancing(1.8rem, bottom, '.breadcrumbs');
 }

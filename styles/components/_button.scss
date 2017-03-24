@@ -1,27 +1,94 @@
-$button-color: 					$brand;
-$button-text-color: 		$white;
-$button-border-radius: 	2px;
+$button-default-color: 									$white;
+$button-default-text-color: 						$major;
+
+$button-primary-color: 									$brand;
+$button-primary-text-color: 						$white;
+
+$button-alternative-color: 							$major;
+$button-alternative-text-color: 				$white;
+
+$button-border-radius: 									2px;
+
+$button-xs-font-size: 									2rem;
+$button-sm-font-size: 									1.5rem;
+$button-md-font-size: 									2rem;
+$button-lg-font-size: 									2rem;
 
 
 .btn {
-	width: 100%;
-	padding: 10px 20px;
-	background-color: $button-color;
+	padding: 11px 20px 9px;
+	display: inline-block;
+	background-color: $button-default-color;
 	border: 0 none;
-	font-size: 2rem;
-	line-height: 2.5rem;
+	font-size: $button-md-font-size;
+	line-height: $button-md-font-size + .5rem;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: $button-text-color;
+	color: $button-default-text-color;
 	border-radius: $button-border-radius;
 	cursor: pointer;
-	transition: background-color .2s ease;
+	transition: background-color .2s ease, color .2s ease;
+	text-decoration: none;
+	text-align: center;
 
 	&:hover {
-		background-color: darken($button-color, 5);
+		background-color: $major;
+		color: $white;
+		text-decoration: none;
 	}
 
 	&:focus {
 		outline: none;
+	}
+}
+
+.btn-primary {
+	background-color: $button-primary-color;
+	color: $button-primary-text-color;
+
+	&:hover {
+		background-color: darken($button-primary-color, 5);
+		color: $button-primary-text-color;
+	}
+}
+
+.btn-alternative {
+	background-color: $button-alternative-color;
+	color: $button-alternative-text-color;
+
+	&:hover {
+		background-color: darken($button-alternative-color, 5);
+		color: $button-alternative-text-color;
+	}
+}
+
+.btn-sm {
+	padding: 3px 9px 3px;
+	font-size: $button-sm-font-size;
+	line-height: $button-sm-font-size + .5rem;
+	text-transform: none;
+	font-weight: normal;
+}
+
+.btn-lg {
+	padding: 11px 20px 9px;
+	font-size: $button-lg-font-size;
+	line-height: $button-lg-font-size + .5rem;
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.buttons-set {
+	cursor: default;
+	margin-left: -3px;
+	margin-right: -3px;
+	
+	.btn {
+		margin-bottom: 8px;
+		margin-left: 3px;
+		margin-right: 3px;
 	}
 }

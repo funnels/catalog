@@ -1,0 +1,7 @@
+.phone {
+	font-size: 3rem;
+	line-height: 3rem;
+	color: $phone-color;
+	font-weight: bold;
+	@include distancing(1.8rem, bottom);
+}

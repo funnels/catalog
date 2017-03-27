@@ -1,12 +1,15 @@
 $bg-exclamation: 								$brand;
 $bg-exclamation-tip: 						$accent;
 
+$alert-border-radius: 					$border-radius-base;
+
 
 .alert {
 	background-color: #fff;
 	position: relative;
-	min-height: 55px;
-	padding: 5px 10px 5px 84px;
+	min-height: 54px;
+	padding: 16px 10px 16px 84px;
+	border-radius: $alert-border-radius;
 
 	.tip {
 		position: absolute;
@@ -14,12 +17,17 @@ $bg-exclamation-tip: 						$accent;
 		left: 0;
 		bottom: 0;
 		width: 53px;
+		border-bottom-left-radius: $alert-border-radius;
+		border-top-left-radius: $alert-border-radius;
 
 		&:after {
-			@include pseudo-block(32px, 27px);
-			top: 14px;
-			right: -16px;
-			transform: rotate(60deg) skew(30deg);
+			$corner-width: 20px;
+
+			@include pseudo-block($corner-width, 100%);
+			top: 0;
+			right: -$corner-width;
+			background: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" preserveAspectRatio="none"><polygon fill="#FBB040" points="0,0 24,12 0,24 "/></svg>') no-repeat 0 0;
+			background-size: 100% 100%;
 		}
 
 		[class^=icon] {
@@ -29,6 +37,11 @@ $bg-exclamation-tip: 						$accent;
 			transform: translateX(-50%) translateY(-50%);
 		}
 	}
+
+	&._spread-text {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
 }
 
 .alert-exclamation {
@@ -37,9 +50,5 @@ $bg-exclamation-tip: 						$accent;
 
 	.tip {
 		background-color: $bg-exclamation-tip;
-
-		&:after {
-			background-color: $bg-exclamation-tip;
-		}
 	}
 }

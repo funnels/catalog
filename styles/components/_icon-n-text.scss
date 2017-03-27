@@ -1,6 +1,8 @@
 .icon-n-text {
 	display: inline-block;
 	white-space: nowrap;
+	@include distancing(1.7rem, top);
+	@include distancing(1.7rem, bottom);
 
 	> [class^=icon] {
 		vertical-align: middle;
@@ -21,7 +23,11 @@
 	&._icon-top {
 		> [class^=icon] {
 			vertical-align: top;
-			margin-top: -2px;
+			margin-top: -1px;
 		}
+	}
+	
+	@at-root div#{&} {
+		display: block;
 	}
 }

@@ -1,0 +1,14 @@
+.form-search {
+	@include distancing(2rem, bottom);
+	@include distancing(1.8rem, bottom, '.breadcrumbs');
+}
+
+.search-query {
+	color: $accent;
+	font-size: 2.7rem;
+	line-height: 2.7rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	@include distancing(2rem, top);
+	@include distancing(1.6rem, bottom);
+}

@@ -5,6 +5,11 @@
 .icon-like {
 	width: 36px;
 	height: 36px;
+
+	&._small {
+		width: 22px;
+		height: 22px;
+	}
 }
 
 .icon-star {

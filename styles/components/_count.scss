@@ -34,16 +34,3 @@ $count-value-color: 			$accent;
 		line-height: 1.8rem;
 	}
 }
-
-.count-sm-set {
-	@include make-row(18px);
-	@include distancing(10px, top);
-
-	.count-sm {
-		@include make-xs-column(5, 18px);
-
-		+ .count-sm {
-			@include make-xs-column-offset(2);
-		}
-	}
-}

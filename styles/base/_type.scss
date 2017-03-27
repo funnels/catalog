@@ -1,6 +1,7 @@
 $link-color: 						$brand;
 $heading: 							$intense;
 
+
 a {
 	color: $link-color;
 	text-decoration: underline;
@@ -27,10 +28,13 @@ a {
 
 p {
 	@include distancing(1.7rem, top);
-	@include distancing(3rem !important, top, '.row');
+	@include distancing(2rem !important, top, '.row');
 	@include distancing(3rem !important, top, '.list-steps');
+	@include distancing(1rem, top, '.table-no-borders');
+
 	@include distancing(1.7rem, bottom);
 	@include distancing(1rem, bottom, 'p');
+	@include distancing(1rem, bottom, '.table-no-borders');
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,9 +100,9 @@ h5 {
 }
 
 h6 {
-	font-size: 1.3rem;
+	color: $major;
+	font-size: 1.5rem;
 	line-height: 1.6rem;
-	text-transform: uppercase;
 	
 	// @include distancing(2.5rem !important, top);
 	@include distancing(0, bottom);
@@ -130,6 +134,11 @@ h6 {
 	color: $accent;
 }
 
+.color-intense {
+	color: $intense;
+}
+
+// sizes
 .text-xs {
 	font-size: 1.1rem;
 	line-height: 1.3rem;
@@ -141,8 +150,8 @@ h6 {
 }
 
 .text-lg {
-	font-size: 2.8rem;
-	line-height: 2.8rem;
+	font-size: 1.8rem;
+	line-height: 2.2rem;
 }
 
 .text-xl {
@@ -150,16 +159,15 @@ h6 {
 	line-height: 2.8rem;
 }
 
-.text-left {
-  text-align: left;
-}
+// alignment
+.text-left { text-align: left }
+.text-right { text-align: right }
+.text-center { text-align: center }
 
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
+@media (max-width: $screen-xs-max) {
+	.text-left-xs { text-align: left }
+	.text-right-xs { text-align: right }
+	.text-center-xs { text-align: center }
 }
 
 .text-upper {
@@ -202,7 +210,7 @@ hr {
 	@include distancing(3.5rem !important, top);
 	@include distancing(3.5rem !important, bottom);
 
-	&.indent-sm {
+	&.hr-indent-sm {
 		@include distancing(2rem !important, top);
 		@include distancing(2rem !important, bottom);
 	}
@@ -220,4 +228,9 @@ dl {
 	dd {
 		margin-left: 20px;
 	}
+}
+
+::selection {
+	color: $white;
+	background-color: $brand;
 }

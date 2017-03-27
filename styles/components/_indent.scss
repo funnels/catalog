@@ -1,0 +1,62 @@
+$indent-vertical: 				$rem-size;
+
+
+@media (max-width: $screen-xs-max) {
+	.indent-xs-05 {
+		@include distancing($indent-vertical * .5, top);		
+	}
+	.indent-xs-1 {
+		@include distancing($indent-vertical * 1, top);		
+	}
+	.indent-xs-2 {
+		@include distancing($indent-vertical * 2, top);		
+	}
+	.indent-xs-3 {
+		@include distancing($indent-vertical * 3, top);		
+	}
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.indent-sm-05 {
+		@include distancing($indent-vertical * .5, top);		
+	}
+	.indent-sm-1 {
+		@include distancing($indent-vertical * 1, top);		
+	}
+	.indent-sm-2 {
+		@include distancing($indent-vertical * 2, top);		
+	}
+	.indent-sm-3 {
+		@include distancing($indent-vertical * 3, top);		
+	}
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	.indent-md-05 {
+		@include distancing($indent-vertical * .5, top);		
+	}
+	.indent-md-1 {
+		@include distancing($indent-vertical * 1, top);		
+	}
+	.indent-md-2 {
+		@include distancing($indent-vertical * 2, top);		
+	}
+	.indent-md-3 {
+		@include distancing($indent-vertical * 3, top);		
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.indent-lg-05 {
+		@include distancing($indent-vertical * .5, top);		
+	}
+	.indent-lg-1 {
+		@include distancing($indent-vertical * 1, top);		
+	}
+	.indent-lg-2 {
+		@include distancing($indent-vertical * 2, top);		
+	}
+	.indent-lg-3 {
+		@include distancing($indent-vertical * 3, top);		
+	}
+}

@@ -8,7 +8,7 @@ $review-border-radius: 		2px;
 	padding: 18px 17px;
 	@include distancing(1.5rem, bottom);
 	@include distancing(1.2rem, bottom, '.review');
-	@include distancing(1.5rem, bottom, '.reviews-actions');
+	@include distancing(1.2rem, bottom, '.reviews-actions');
 
 	.rating {
 		text-align: left;
@@ -26,7 +26,10 @@ $review-border-radius: 		2px;
 
 .reviews-actions {
 	.link-to-all {
-		margin-top: 10px;
 		display: inline-block;
+
+		@media (min-width: $screen-sm-min) {
+			margin-top: 10px;
+		}
 	}
 }

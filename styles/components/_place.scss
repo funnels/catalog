@@ -1,8 +1,8 @@
 $place-info-bg: 									$white;
-$place-info-border-radius: 			2px;
+$place-info-border-radius: 				2px;
 
 
-.place-info {
+.place {
 	padding: 15px 20px;
 	background-color: $place-info-bg;
 	border-radius: $place-info-border-radius;
@@ -18,4 +18,9 @@ $place-info-border-radius: 			2px;
 		margin-top: 1.8rem !important;
 	}
 
+}
+
+.place-small {
+	@include distancing(4rem, top);
+	@include distancing(4rem, bottom);
 }

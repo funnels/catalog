@@ -1,11 +1,11 @@
 $grid-gutter-xs: 			14px;
 $grid-gutter-sm: 			20px;
-$grid-gutter-lg: 			70px;
+$grid-gutter-lg: 			60px;
 
 
 .row {
 
-	&._gutter-xs {
+	&.row-gutter-xs {
 		margin-left: -$grid-gutter-xs/2;
 		margin-right: -$grid-gutter-xs/2;
 
@@ -15,7 +15,7 @@ $grid-gutter-lg: 			70px;
 		}
 	}
 	
-	&._gutter-sm {
+	&.row-gutter-sm {
   	margin-right: -$grid-gutter-sm/2;
   	margin-left: -$grid-gutter-sm/2;
 
@@ -25,7 +25,7 @@ $grid-gutter-lg: 			70px;
 		}
 	}
 	
-	&._gutter-lg {
+	&.row-gutter-lg {
   	margin-right: -$grid-gutter-lg/2;
   	margin-left: -$grid-gutter-lg/2;
 

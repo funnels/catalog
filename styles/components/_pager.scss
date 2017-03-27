@@ -1,0 +1,58 @@
+.pager {
+	@include distancing(2rem !important, top);
+	text-align: center;
+	cursor: default;
+	
+	ul {
+		@include list-reset();
+
+		li {
+			margin-left: 2px;
+			margin-right: 2px;
+			display: inline-block;
+		}
+	}
+
+	a {
+		min-width: 30px;
+		padding: 4px 6px;
+		border: 1px	solid $border;
+		display: inline-block;
+		background-color: $white;
+		color: $major;
+		font-size: 1.8rem;
+		line-height: 2rem;
+		font-weight: bold;
+		text-decoration: none;
+		border-radius: $border-radius-base;
+		transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+
+		[class^=icon] {
+			position: relative;
+			top: 2px;
+		}
+
+		&:hover {
+			color: $major;
+			text-decoration: none;
+		}
+
+		&.prev,
+		&.next {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		&:hover {
+			border-color: transparent;
+			background-color: $major;
+			color: $white;
+		}
+
+		&.current {
+			border-color: transparent;
+			background-color: $accent;
+			color: $white;
+		}
+	}
+}

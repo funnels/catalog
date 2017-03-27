@@ -4,30 +4,32 @@ $button-default-text-color: 						$major;
 $button-primary-color: 									$brand;
 $button-primary-text-color: 						$white;
 
+$button-accent-color: 									$accent;
+$button-accent-text-color: 							$white;
+
 $button-alternative-color: 							$major;
 $button-alternative-text-color: 				$white;
 
 $button-border-radius: 									2px;
 
-$button-xs-font-size: 									2rem;
+$button-xs-font-size: 									1.2rem;
 $button-sm-font-size: 									1.5rem;
-$button-md-font-size: 									2rem;
+$button-md-font-size: 									1.7rem;
 $button-lg-font-size: 									2rem;
 
 
 .btn {
-	padding: 11px 20px 9px;
+	padding: 6px 14px 6px;
 	display: inline-block;
 	background-color: $button-default-color;
-	border: 0 none;
+	border: 1px solid transparent;
 	font-size: $button-md-font-size;
 	line-height: $button-md-font-size + .5rem;
 	font-weight: bold;
-	text-transform: uppercase;
 	color: $button-default-text-color;
 	border-radius: $button-border-radius;
 	cursor: pointer;
-	transition: background-color .2s ease, color .2s ease;
+	transition: background-color .2s ease, color .2s ease, border-color .2s ease;
 	text-decoration: none;
 	text-align: center;
 
@@ -42,38 +44,34 @@ $button-lg-font-size: 									2rem;
 	}
 }
 
-.btn-primary {
-	background-color: $button-primary-color;
-	color: $button-primary-text-color;
+.btn-outline {
+	border-color: $border;
 
 	&:hover {
-		background-color: darken($button-primary-color, 5);
-		color: $button-primary-text-color;
-	}
-}
-
-.btn-alternative {
-	background-color: $button-alternative-color;
-	color: $button-alternative-text-color;
-
-	&:hover {
-		background-color: darken($button-alternative-color, 5);
-		color: $button-alternative-text-color;
+		border-color: transparent;
 	}
 }
 
 .btn-sm {
-	padding: 3px 9px 3px;
+	padding: 2px 8px 2px;
 	font-size: $button-sm-font-size;
 	line-height: $button-sm-font-size + .5rem;
 	text-transform: none;
-	font-weight: normal;
+	font-weight: 300;
+}
+
+.btn-md {
+	padding: 6px 14px 6px;
+	font-size: $button-md-font-size;
+	line-height: $button-md-font-size + .5rem;
+	font-weight: 300;
 }
 
 .btn-lg {
-	padding: 11px 20px 9px;
+	padding: 10px 19px 8px;
 	font-size: $button-lg-font-size;
 	line-height: $button-lg-font-size + .5rem;
+	text-transform: uppercase;
 }
 
 .btn-block {
@@ -85,10 +83,41 @@ $button-lg-font-size: 									2rem;
 	cursor: default;
 	margin-left: -3px;
 	margin-right: -3px;
+	margin-bottom: -8px;
 	
 	.btn {
 		margin-bottom: 8px;
 		margin-left: 3px;
 		margin-right: 3px;
+	}
+}
+
+.btn-primary {
+	background-color: $button-primary-color;
+	color: $button-primary-text-color;
+
+	&:hover {
+		background-color: darken($button-primary-color, 5);
+		color: $button-primary-text-color;
+	}
+}
+
+.btn-accent {
+	background-color: $button-accent-color;
+	color: $button-accent-text-color;
+
+	&:hover {
+		background-color: darken($button-accent-color, 10);
+		color: $button-accent-text-color;
+	}
+}
+
+.btn-alternative {
+	background-color: $button-alternative-color;
+	color: $button-alternative-text-color;
+
+	&:hover {
+		background-color: darken($button-alternative-color, 5);
+		color: $button-alternative-text-color;
 	}
 }

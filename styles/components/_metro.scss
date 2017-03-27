@@ -15,7 +15,7 @@ $metro-line-3-color:  				#2300f0;
 	color: $metro-line-3-color;
 }
 
-.metro-list-xs {
+.metro-list-small {
 	$margin: 2px;
 	@include list-reset();
 	margin-left: -$margin;
@@ -34,7 +34,7 @@ $metro-line-3-color:  				#2300f0;
 			left: 0;
 			top: 50%;
 			transform: translateY(-50%);
-			border-radius: 4px;
+			border-radius: 5px;
 		}
 
 		&.metro-line-1-color:before {
@@ -48,5 +48,9 @@ $metro-line-3-color:  				#2300f0;
 		&.metro-line-3-color:before {
 			background-color: $metro-line-3-color;
 		}
+	}
+
+	.icon-n-text & {
+		margin-top: 5px;
 	}
 }

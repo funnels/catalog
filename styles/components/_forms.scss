@@ -3,46 +3,51 @@ $input-border-radius: 			2px;
 $input-text-color: 					$major;
 
 
-input[type=text],
-input[type=email],
-input[type=search],
-input[type=tel],
-input[type=password],
-input[type=number] {
-	width: 100%;
-	padding: 12px 19px;
+.form-control {
+  width: 100%;
+  display: block;
+  height: auto;
+  padding: 12px 19px;
 	border: 1px solid $input-border-color;
 	color: $input-text-color;
 	font-size: inherit;
 	line-height: 1.9rem;
 	font-weight: inherit;
-	border-radius: $input-border-radius;
-	background-color: $white;
+  background-color: $white;
+  box-shadow: none;
+  transition: none;
+
+  &:focus {
+  	border-color: $input-border-color;
+		outline: none;
+		box-shadow: none;
+	}
+
 	@include placeholder($major);
 
-	&:focus {
-		outline: none;
+	@at-root select#{&} {
+		height: auto;
+		padding-right: 44px;
+		background-image: url(../images/icons/select-arrow.png);
+		background-position: calc(100% - 13px) 50%;
+		background-repeat: no-repeat;
+		-webkit-appearance: none;
+		appearance: none;
+		cursor: pointer;
 	}
 }
 
-select {
-	width: 100%;
-	padding: 12px 19px;
-	background-color: $white;
-	border: 1px solid $input-border-color;
-	border-radius: $input-border-radius;
-	color: $input-text-color;
+.input-lg {
+  padding: 12px 19px;
 	font-size: inherit;
 	line-height: 1.9rem;
-	font-weight: inherit;
-	-webkit-appearance: none;
-	appearance: none;
-	cursor: pointer;
-	padding-right: 44px;
-	background: url(../images/icons/select-arrow.png) no-repeat calc(100% - 13px) 50%;
-
-	&:focus {
-		outline: none;
+	
+	@at-root select#{&} {
+		padding-right: 44px;
+		background-image: url(../images/icons/select-arrow.png);
+		background-position: calc(100% - 13px) 50%;
+		background-repeat: no-repeat;
+		line-height: 1.9rem;
 	}
 }
 
@@ -59,15 +64,4 @@ input.input-name {
 input.input-phone {
 	padding-left: 41px;
 	background: url(../images/icons/phone.png) no-repeat 9px 50%;
-}
-
-@media (max-width: $screen-xs-max) {
-	.form-field {
-		@include distancing(1.2rem, top, '.form-field');
-	}
-}
-
-.form-search {
-	@include distancing(2rem, bottom);
-	@include distancing(1.8rem, bottom, '.breadcrumbs');
 }

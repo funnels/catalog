@@ -1,21 +1,23 @@
 // base
 @import 'base/fonts';
 @import 'base/mixins';
-@import 'base/variables'; 
+@import 'base/variables';
+@import 'base/variables-bootstrap'; // redefine bootstrap variables
 
 // libs
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/variables';
-@import 'base/variables-bootstrap'; // redefine bootstrap variables
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/grid';
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/forms';
 // @import '../lib/slick-carousel/slick/slick.scss';
 // @import '../lib/magnific-popup/dist/magnific-popup.scss';
 
 // base
+@import 'base/normalize';
 @import 'base/type';
 @import 'base/carcass';
 
@@ -34,13 +36,16 @@
 @import 'components/list-implex';
 @import 'components/card';
 @import 'components/breadcrumbs';
-@import 'components/photo';
 @import 'components/rating';
 @import 'components/alert';
 @import 'components/review';
-@import 'components/place-info';
+@import 'components/place';
 @import 'components/map';
 @import 'components/metro';
 @import 'components/phone';
-@import 'components/table-prices';
+@import 'components/table';
 @import 'components/list-links';
+@import 'components/search';
+@import 'components/indent';
+@import 'components/badge';
+@import 'components/pager';

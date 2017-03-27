@@ -4,21 +4,8 @@ $footer-bg: 						$major;
 $footer-text-color: 		$white;
 
 
-* {
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
-img {
-	max-width: 100%;
-}
-
 html {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	font-size: $rem-size;
 }
 

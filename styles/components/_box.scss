@@ -1,4 +1,5 @@
 $box-bg: 										$white;
+$box-bg-2: 									$bg-2;
 $box-border-radius: 				2px;
 
 
@@ -7,16 +8,26 @@ $box-border-radius: 				2px;
 	background-color: $box-bg;
 	border-radius: $box-border-radius;
 
+	@include distancing(2rem, top);
 	@include distancing(2rem, bottom);
 
 	&._slim {
 		padding: 22px 20px;
 	}
 
-	&._subheader {
+	&.box-subheader {
+		padding: 0;
 		margin-top: -36px;
-		padding: 0 0 10px;
 		box-shadow: 0 3px 3px -2px rgba(24,24,24,.25);
+
+		> .container {
+			padding-bottom: 14px;
+		
+			@media (max-width: $screen-xs-max){
+				padding-top: 10px;
+			}
+		}
+
 	}
 }
 
@@ -25,4 +36,67 @@ $box-border-radius: 				2px;
 	background-color: $box-bg;
 	box-shadow: 0 1px 3px rgba(24,24,24,.25);
 	border-radius: $box-border-radius;;
+}
+
+.box-footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: $box-bg-2;
+}
+
+.box-separated {
+	$padding: 28px;
+	
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: $padding;
+	padding-right: $padding;
+	border-radius: $box-border-radius;
+	background-color: $box-bg;
+
+	> .row {
+		
+		> [class*=col-sm],
+		> [class*=col-md] {
+			padding-top: $padding;
+			padding-bottom: $padding;
+		}
+		
+		@media (max-width: $screen-xs-max) {
+			> [class*=col-] + [class*=col-] {
+				padding-top: 0;
+			}
+		}
+	
+		@media (min-width: $screen-sm-min) {
+			> [class*=col-sm],
+			> [class*=col-md] {
+
+				&:before,
+				&:after {
+					@include pseudo-block(0, 100%);
+					border-left: 1px solid $border;
+					top: 0;
+				}
+
+				&:before {
+					left: -1px;
+				}
+
+				&:after {
+					right: 0;
+				}
+
+				&:first-child:before,
+				&:last-child:after {
+					display: none;
+				}
+			}
+		}
+
+	}
+}
+
+.box-no-frame {
+	padding: 0;
 }

@@ -16,11 +16,29 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
+.icon-arrow-next {
+  background-image: url(../images/icons-sprite.png);
+  background-position: -11px -90px;
+  width: 11px;
+  height: 15px;
+}
+.icon-arrow-prev {
+  background-image: url(../images/icons-sprite.png);
+  background-position: 0px -90px;
+  width: 11px;
+  height: 15px;
+}
 .icon-arrow-right {
   background-image: url(../images/icons-sprite.png);
   background-position: -100px -35px;
   width: 9px;
   height: 5px;
+}
+.icon-clock {
+  background-image: url(../images/icons-sprite.png);
+  background-position: -24px -66px;
+  width: 18px;
+  height: 18px;
 }
 .icon-exclamation {
   background-image: url(../images/icons-sprite.png);
@@ -30,25 +48,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-facebook-2 {
   background-image: url(../images/icons-sprite.png);
-  background-position: -50px -41px;
+  background-position: 0px -41px;
   width: 25px;
   height: 25px;
 }
 .icon-facebook {
   background-image: url(../images/icons-sprite.png);
-  background-position: -25px -16px;
+  background-position: -25px -41px;
   width: 25px;
   height: 25px;
 }
 .icon-globe {
   background-image: url(../images/icons-sprite.png);
-  background-position: -50px -25px;
+  background-position: -54px -66px;
   width: 14px;
   height: 14px;
 }
 .icon-googleplus {
   background-image: url(../images/icons-sprite.png);
-  background-position: 0px -41px;
+  background-position: -50px -41px;
   width: 25px;
   height: 25px;
 }
@@ -58,6 +76,12 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 15px;
   height: 15px;
 }
+.icon-phone-2 {
+  background-image: url(../images/icons-sprite.png);
+  background-position: -50px -25px;
+  width: 14px;
+  height: 14px;
+}
 .icon-phone {
   background-image: url(../images/icons-sprite.png);
   background-position: 0px -66px;
@@ -66,13 +90,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-point {
   background-image: url(../images/icons-sprite.png);
-  background-position: -24px -66px;
+  background-position: -42px -66px;
   width: 12px;
   height: 18px;
 }
 .icon-select-arrow {
   background-image: url(../images/icons-sprite.png);
-  background-position: -36px -66px;
+  background-position: -68px -66px;
   width: 15px;
   height: 10px;
 }
@@ -84,13 +108,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-twitter-2 {
   background-image: url(../images/icons-sprite.png);
-  background-position: -25px -41px;
+  background-position: -25px -16px;
   width: 25px;
   height: 25px;
 }
 .icon-twitter {
   background-image: url(../images/icons-sprite.png);
-  background-position: -75px 0px;
+  background-position: -50px 0px;
   width: 25px;
   height: 25px;
 }
@@ -102,7 +126,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-vkontakte-2 {
   background-image: url(../images/icons-sprite.png);
-  background-position: -50px 0px;
+  background-position: -75px 0px;
   width: 25px;
   height: 25px;
 }

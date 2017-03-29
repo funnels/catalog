@@ -1,5 +1,5 @@
 $grid-columns:              24;
 
 $border-radius-base:        2px;
-$border-radius-large:       2px;
-$border-radius-small:       2px;
+$border-radius-large:       $border-radius-base;
+$border-radius-small:       $border-radius-base;

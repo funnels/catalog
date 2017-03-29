@@ -1,6 +1,13 @@
 $link-color: 						$brand;
 $heading: 							$intense;
 
+$h1-font-size: 					3rem;
+$h2-font-size: 					2.5rem;
+$h3-font-size: 					2.1rem;
+$h4-font-size: 					1.6rem;
+$h5-font-size: 					1.5rem;
+$h6-font-size: 					1.5rem;
+
 
 a {
 	color: $link-color;
@@ -47,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: $h1-font-size;
 	line-height: 3rem;
 
 	@include distancing(2rem !important, top);
@@ -55,7 +62,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: $h2-font-size;
 	line-height: 2.7rem;
 	text-transform: uppercase;
 
@@ -64,8 +71,8 @@ h2 {
 }
 
 h3 {
-	font-size: 2.1rem;
-	line-height: 2.4rem;
+	font-size: $h3-font-size;
+	line-height: $h3-font-size;
 	text-transform: uppercase;
 
 	@include distancing(3.4rem !important, top);
@@ -73,21 +80,16 @@ h3 {
 }
 
 h4 {
-	font-size: 1.6rem;
-	line-height: 2rem;
+	font-size: $h4-font-size;
+	line-height: $h4-font-size + .3rem;
 	text-transform: uppercase;
 
 	@include distancing(2.5rem !important, top);
 	@include distancing(.8rem, bottom);
-
-	@media (min-width: $screen-sm-min){
-		font-size: 1.6rem;
-		line-height: 2rem;
-	}
 }
 
 h5 {
-	font-size: 1.5rem;
+	font-size: $h5-font-size;
 	line-height: 1.9rem;
 	text-transform: uppercase;
 	
@@ -105,10 +107,9 @@ h5 {
 
 h6 {
 	color: $major;
-	font-size: 1.5rem;
+	font-size: $h6-font-size;
 	line-height: 1.6rem;
 	
-	// @include distancing(2.5rem !important, top);
 	@include distancing(0, bottom);
 }
 

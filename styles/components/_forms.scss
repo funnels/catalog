@@ -1,5 +1,5 @@
 $input-border-color: 				$border;
-$input-border-radius: 			2px;
+$input-border-radius: 			$border-radius-base;
 $input-text-color: 					$major;
 
 
@@ -7,17 +7,15 @@ $input-text-color: 					$major;
   width: 100%;
   display: block;
   height: auto;
-  // padding: 12px 19px;
 	border: 1px solid $input-border-color;
 	color: $input-text-color;
 	font-family: inherit;
-	// font-size: inherit;
-	// line-height: 1.9rem;
 	font-weight: inherit;
   background-color: $white;
   background-repeat: no-repeat;
   box-shadow: none;
   transition: none;
+  border-radius: $input-border-radius;
 
   &:focus {
   	border-color: $input-border-color;

@@ -1,6 +1,6 @@
 $box-bg: 										$white;
 $box-bg-2: 									$bg-2;
-$box-border-radius: 				2px;
+$box-border-radius: 				$border-radius-base;
 
 
 .box {
@@ -35,7 +35,7 @@ $box-border-radius: 				2px;
 	padding: 26px 28px;
 	background-color: $box-bg;
 	box-shadow: 0 1px 3px rgba(24,24,24,.25);
-	border-radius: $box-border-radius;;
+	border-radius: $box-border-radius;
 }
 
 .box-footer {

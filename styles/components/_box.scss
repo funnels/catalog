@@ -44,6 +44,7 @@ $box-border-radius: 				2px;
 	background-color: $box-bg-2;
 }
 
+// .box-separated must have a .row as closest child
 .box-separated {
 	$padding: 28px;
 	

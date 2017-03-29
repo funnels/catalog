@@ -7,13 +7,15 @@ $input-text-color: 					$major;
   width: 100%;
   display: block;
   height: auto;
-  padding: 12px 19px;
+  // padding: 12px 19px;
 	border: 1px solid $input-border-color;
 	color: $input-text-color;
-	font-size: inherit;
-	line-height: 1.9rem;
+	font-family: inherit;
+	// font-size: inherit;
+	// line-height: 1.9rem;
 	font-weight: inherit;
   background-color: $white;
+  background-repeat: no-repeat;
   box-shadow: none;
   transition: none;
 
@@ -37,6 +39,10 @@ $input-text-color: 					$major;
 	}
 }
 
+.input-sm {
+  padding: 3px 10px;
+}
+
 .input-lg {
   padding: 12px 19px;
 	font-size: inherit;
@@ -53,15 +59,50 @@ $input-text-color: 					$major;
 
 input.input-search {
 	padding-right: 44px;
-	background: url(../images/icons/magnifier.png) no-repeat calc(100% - 13px) 50%;
+	background-image: url(../images/icons/magnifier.png);
+	background-position: calc(100% - 13px) 50%;
 }
 
 input.input-name {
 	padding-left: 41px;
-	background: url(../images/icons/user.png) no-repeat 9px 50%;
+	background-image: url(../images/icons/user.png);
+	background-position: 9px 50%;
 }
 
 input.input-phone {
 	padding-left: 41px;
-	background: url(../images/icons/phone.png) no-repeat 9px 50%;
+	background-image: url(../images/icons/phone.png);
+	background-position: 9px 50%;
+}
+
+.form-horizontal {
+	.form-group {
+		@include make-row();
+		margin-left: -$grid-gutter-xs/2;
+		margin-right: -$grid-gutter-xs/2;
+
+		> [class*=col-] {
+	  	padding-right: $grid-gutter-xs/2;
+	  	padding-left: $grid-gutter-xs/2;
+		}
+	}
+
+	.control-label {
+		padding-top: 5px;
+		text-align: left;
+	}
+}
+
+.control-label {
+	font-weight: inherit;
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+}
+
+.input-color-brand {
+	border-color: $brand;
+
+	&:focus {
+		border-color: $brand;
+	}
 }

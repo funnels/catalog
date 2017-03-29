@@ -1,0 +1,43 @@
+.top-panel {
+	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: $major;
+	transform: translateY(calc(-100% - 4px));
+	transition: transform .3s ease;
+	box-shadow: 0 1px 3px rgba(24,24,24,.25);
+	color: $white;
+
+	.form-control,
+	.form-control:focus {
+		border-color: transparent;
+	}
+	
+	&._show {
+		.top-panel-opener {
+			transform: translateY(0);
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		&._show {
+			transform: translateY(0);
+		}
+	}
+}
+
+.top-panel-buttons {
+	@include distancing(1.3rem, top);
+}
+
+.top-panel .buttons-sorting {
+	@media (max-width: $screen-sm-max) {
+		margin-top: 1rem;
+		border-top: 1px solid darken($border, 23);
+		padding-top: 1rem;
+	}
+}

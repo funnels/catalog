@@ -24,17 +24,17 @@ $metro-line-3-color:  				#2300f0;
 	> li {
 		display: inline-block;
 		position: relative;
-		padding-left: 8px;
+		padding-left: 10px;
 		color: inherit;
 		margin-left: $margin;
 		margin-right: $margin;
 
 		&:before {
-			@include pseudo-block(5px);
+			@include pseudo-block(6px);
 			left: 0;
 			top: 50%;
 			transform: translateY(-50%);
-			border-radius: 5px;
+			border-radius: 6px;
 		}
 
 		&.metro-line-1-color:before {

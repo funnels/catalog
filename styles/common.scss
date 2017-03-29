@@ -13,39 +13,39 @@
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/grid';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/forms';
-// @import '../lib/slick-carousel/slick/slick.scss';
-// @import '../lib/magnific-popup/dist/magnific-popup.scss';
+@import '../lib/magnific-popup/dist/magnific-popup.scss';
 
-// base
+// base (after libs)
 @import 'base/normalize';
 @import 'base/type';
 @import 'base/carcass';
 
 // components
-@import 'components/button';
-@import 'components/icons-sprite'; // generated automatically, do not edit
-@import 'components/icons';
-@import 'components/icon-n-text';
-@import 'components/forms';
-@import 'components/box';
-@import 'components/dropdown';
-@import 'components/grid';
-@import 'components/button';
-@import 'components/count';
-@import 'components/list-steps';
-@import 'components/list-implex';
-@import 'components/card';
-@import 'components/breadcrumbs';
-@import 'components/rating';
 @import 'components/alert';
-@import 'components/review';
-@import 'components/place';
+@import 'components/badge';
+@import 'components/box';
+@import 'components/breadcrumbs';
+@import 'components/button';
+@import 'components/card';
+@import 'components/count';
+@import 'components/dropdown';
+@import 'components/forms';
+@import 'components/grid';
+@import 'components/icon-n-text';
+@import 'components/icons';
+@import 'components/icons-sprite'; // generated automatically, do not edit
+@import 'components/indent';
+@import 'components/list-implex';
+@import 'components/list-links';
+@import 'components/list-steps';
 @import 'components/map';
 @import 'components/metro';
-@import 'components/phone';
-@import 'components/table';
-@import 'components/list-links';
-@import 'components/search';
-@import 'components/indent';
-@import 'components/badge';
 @import 'components/pager';
+@import 'components/phone';
+@import 'components/place';
+@import 'components/popup';
+@import 'components/rating';
+@import 'components/review';
+@import 'components/search';
+@import 'components/table';
+@import 'components/top-panel';

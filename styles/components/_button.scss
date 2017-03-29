@@ -52,6 +52,17 @@ $button-lg-font-size: 									2rem;
 	}
 }
 
+.btn-outline-inverse {
+	border-color: $button-default-color;
+	background-color: $button-default-text-color;
+	color: $button-default-color;
+
+	&:hover {
+		background-color: $button-default-color;
+		color: $button-default-text-color;
+	}
+}
+
 .btn-sm {
 	padding: 2px 8px 2px;
 	font-size: $button-sm-font-size;
@@ -83,10 +94,10 @@ $button-lg-font-size: 									2rem;
 	cursor: default;
 	margin-left: -3px;
 	margin-right: -3px;
-	margin-bottom: -8px;
-	
+	margin-top: 0;
+
 	.btn {
-		margin-bottom: 8px;
+		margin-top: 8px;
 		margin-left: 3px;
 		margin-right: 3px;
 	}
@@ -119,5 +130,62 @@ $button-lg-font-size: 									2rem;
 	&:hover {
 		background-color: darken($button-alternative-color, 5);
 		color: $button-alternative-text-color;
+	}
+}
+
+
+.buttons-search {
+	@include clearfix();
+
+	.buttons-set {
+		margin-top: -8px;
+	}
+
+	.btn {
+		min-width: 124px;
+	}
+}
+
+
+.buttons-sorting {
+	text-align: left;
+	@include clearfix();
+
+	.heading {
+		margin-right: 10px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.buttons-set {
+		margin-top: -8px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.btn {
+		min-width: 124px;
+	}
+
+	@media (min-width: $screen-sm-min){
+		text-align: left;
+	}
+
+	@media (min-width: $screen-md-min){
+		text-align: right;
+
+		.btn {
+			min-width: 0;
+		}
+	}
+
+	@media (min-width: $screen-lg-min){
+		text-align: right;
+
+		.btn {
+			min-width: 124px;
+		}
 	}
 }

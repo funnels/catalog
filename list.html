@@ -32,6 +32,72 @@
 			</div>
 		</header>
 
+		<div class="top-panel">
+			<div class="container">
+				
+				<form class="form-search" action="">
+				
+					<div class="row row-gutter-xs">
+						<div class="col-sm-9 col-md-10 indent-xs-1">
+							
+							<input type="text" class="form-control input-lg input-search" name="" id="" placeholder="Введите специальность или услугу...">
+				
+						</div>
+						<div class="col-sm-9 col-md-10 indent-xs-1">
+							
+							<select class="form-control input-lg" name="" id="">
+								<option value="">Выберите район</option>
+								<option value="">Район 1</option>
+								<option value="">Район 2</option>
+							</select>
+				
+						</div>
+						<div class="col-sm-6 col-md-4 indent-xs-1">
+							
+							<button class="btn btn-primary btn-lg btn-block" type="submit">Найти</button>
+				
+						</div>
+					</div>
+				
+				</form>
+
+				<div class="top-panel-buttons">
+					<div class="row row-gutter-xs">
+						<div class="col-xs-24 col-sm-24 col-md-11">
+					
+							<div class="buttons-search">
+								<div class="buttons-set">
+									<a href="" class="btn btn-outline-inverse btn-sm">С расписанием</a>
+									
+									<a href="" class="btn btn-outline-inverse btn-sm">Детский врач</a>
+									
+									<a href="" class="btn btn-accent btn-sm">Выезд на дом</a>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-xs-24 col-sm-24 col-md-13 indent-xs-1">
+
+							
+							<div class="buttons-sorting">
+								<span class="heading">Сортировать по:</span>
+								
+								<div class="buttons-set">
+									<a href="" class="btn btn-outline-inverse btn-sm">Рейтингу</a>
+									
+									<a href="" class="btn btn-outline-inverse btn-sm">Стоимости</a>
+									
+									<a href="" class="btn btn-accent btn-sm">Стажу работы</a>
+								</div>
+							</div>
+					
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 		<div class="content-area">
 
 			<div class="box box-subheader">
@@ -83,21 +149,13 @@
 				<div class="box-footer">
 					<div class="container">
 
-						<div class="row row-gutter-xs">
-							<div class="col-xs-12 col-sm-5 col-md-4">
-
-								<a href="" class="btn btn-outline btn-sm btn-block">С расписанием</a>
-
-							</div>
-							<div class="col-xs-12 col-sm-5 col-md-4 col-sm-offset-1">
-
-								<a href="" class="btn btn-outline btn-sm btn-block">Детский врач</a>
-
-							</div>
-							<div class="col-xs-24 col-sm-5 col-md-4 col-sm-offset-1 indent-xs-1">
-
-								<a href="" class="btn btn-accent btn-sm btn-block">Выезд на дом</a>
-
+						<div class="buttons-search">
+							<div class="buttons-set">
+								<a href="" class="btn btn-outline btn-sm">С расписанием</a>
+								
+								<a href="" class="btn btn-outline btn-sm">Детский врач</a>
+								
+								<a href="" class="btn btn-accent btn-sm">Выезд на дом</a>
 							</div>
 						</div>
 
@@ -181,22 +239,22 @@
 							<table class="table-no-borders">
 								<tr>
 									<td>Гепатология</td>
-									<td class="text-right">
+									<td class="text-right text-left-xs">
 										<span class="badge-price">4200 руб</span>
-										<del>4500</del> руб/усл.
+										<del>4500</del>&nbsp;руб/усл.
 									</td>
 								</tr>
 								<tr>
 									<td>Хирургия</td>
-									<td class="text-right">
+									<td class="text-right text-left-xs">
 										4500 руб/усл.
 									</td>
 								</tr>
 								<tr>
 									<td>Иммунология</td>
-									<td class="text-right">
+									<td class="text-right text-left-xs">
 										<span class="badge-price">4200 руб</span>
-										<del>4500</del> руб/усл.
+										<del>4500</del>&nbsp;руб/усл.
 									</td>
 								</tr>
 							</table>
@@ -250,7 +308,60 @@
 									<span class="text"><span class="color-intense text-lg"><b>х (ххх) ххх-хх-хх</b></span></span>
 								</div>
 									
-								<a href="" class="btn btn-primary btn-lg">ЗАПИСАТЬСЯ</a>
+								<a href="#popup-request" class="btn btn-primary btn-lg popup-link">ЗАПИСАТЬСЯ</a>
+		
+								<div class="popup zoom-anim-dialog popup-form mfp-hide" id="popup-request">
+
+									<h4>Запись онлайн в клинику</h4>
+									
+									<h5 class="heading-alternative color-brand text-center">Чудо Доктор</h5>
+									
+									<p class="text-center"><b>Врач Ходаковская Галина Ивановна</b></p>
+									
+									<form action="" class="form-horizontal">
+										
+										<div class="form-group">
+											<label for="" class="col-sm-7 control-label">Ваше имя</label>
+											<div class="col-sm-17">
+												<input type="text" class="form-control input-sm input-color-brand" id="">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="" class="col-sm-7 control-label">Ваш телефон</label>
+											<div class="col-sm-17">
+												<input type="text" class="form-control input-sm input-color-brand" id="">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="" class="col-sm-7 control-label">Жалаемая дата/ время приема</label>
+											<div class="col-sm-17">
+												<input type="text" class="form-control input-sm input-color-brand" id="">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="col-sm-17 col-sm-offset-7">
+												<button class="btn btn-primary btn-lg" type="submit">Отправить</button>
+											</div>
+										</div>
+
+									</form>
+
+									<div class="popup-footer text-center">
+										
+										<p class="text-xs">или звоните по телефону</p>
+
+										<div class="phone">х (ххх) ххх-хх-хх</div>
+
+										<p class="text-xs">После отправки с Вами в ближайшее время<br class="hidden-xs">
+										свяжется специалист call-центра и уточнит все<br class="hidden-xs">
+										интересующие Вас вопросы</p>
+
+									</div>
+								</div>
+
 							</div>
 
 							<div class="place-small">
@@ -296,7 +407,60 @@
 									<span class="text"><span class="color-intense text-lg"><b>х (ххх) ххх-хх-хх</b></span></span>
 								</div>
 									
-								<a href="" class="btn btn-primary btn-lg">ЗАПИСАТЬСЯ</a>
+								<a href="#popup-request-2" class="btn btn-primary btn-lg popup-link">ЗАПИСАТЬСЯ</a>
+
+								<div class="popup zoom-anim-dialog popup-form mfp-hide" id="popup-request-2">
+
+									<h4>Запись онлайн в клинику</h4>
+									
+									<h5 class="heading-alternative color-brand text-center">МедЦентрСервис на Курской</h5>
+									
+									<p class="text-center"><b>Врач Ходаковская Галина Ивановна</b></p>
+									
+									<form action="" class="form-horizontal">
+										
+										<div class="form-group">
+											<label for="" class="col-sm-7 control-label">Ваше имя</label>
+											<div class="col-sm-17">
+												<input type="text" class="form-control input-sm input-color-brand" id="">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="" class="col-sm-7 control-label">Ваш телефон</label>
+											<div class="col-sm-17">
+												<input type="text" class="form-control input-sm input-color-brand" id="">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label for="" class="col-sm-7 control-label">Жалаемая дата/ время приема</label>
+											<div class="col-sm-17">
+												<input type="text" class="form-control input-sm input-color-brand" id="">
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="col-sm-17 col-sm-offset-7">
+												<button class="btn btn-primary btn-lg" type="submit">Отправить</button>
+											</div>
+										</div>
+
+									</form>
+
+									<div class="popup-footer text-center">
+										
+										<p class="text-xs">или звоните по телефону</p>
+
+										<div class="phone">х (ххх) ххх-хх-хх</div>
+
+										<p class="text-xs">После отправки с Вами в ближайшее время<br class="hidden-xs">
+										свяжется специалист call-центра и уточнит все<br class="hidden-xs">
+										интересующие Вас вопросы</p>
+
+									</div>
+								</div>
+
 							</div>
 						
 						</div>
@@ -594,6 +758,7 @@
 	</div>
 
 	<script src="lib/jquery/dist/jquery.min.js"></script>
+	<script src="lib/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 	<script src="behavior/common.js"></script>
 </body>
 </html>

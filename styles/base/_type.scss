@@ -10,6 +10,10 @@ a {
 		color: $link-color;
 		text-decoration: none;
 	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .links-as-text {
@@ -213,6 +217,10 @@ hr {
 	&.hr-indent-sm {
 		@include distancing(2rem !important, top);
 		@include distancing(2rem !important, bottom);
+	}
+	&.hr-indent-xs {
+		@include distancing(1rem !important, top);
+		@include distancing(1rem !important, bottom);
 	}
 }
 

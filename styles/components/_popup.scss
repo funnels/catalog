@@ -1,0 +1,145 @@
+$popup-padding-v: 				20px;
+$popup-padding-h: 				42px;
+$popup-border-radius:		 	2px;
+
+
+.popup {
+	max-width: 645px;
+	padding: 15px $popup-padding-h $popup-padding-v;
+	background-color: $bg;
+	border-radius: $popup-border-radius;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+
+	@media (max-width: $screen-xs-max){
+		$popup-padding-h: 20px;
+		padding-left: $popup-padding-h;
+		padding-right: $popup-padding-h;
+	}
+}
+
+.popup-footer {
+	padding: 12px $popup-padding-h $popup-padding-v;
+	margin: 17px (-$popup-padding-h) (-$popup-padding-v);
+	border-bottom-left-radius: $popup-border-radius;
+	border-bottom-right-radius: $popup-border-radius;
+	background-color: $brand;
+	color: $white;
+	
+	.phone {
+		margin-top: 12px;
+		color: $white;
+	}
+
+	@media (max-width: $screen-xs-max){
+		$popup-padding-h: 20px;
+		padding-left: $popup-padding-h;
+		padding-right: $popup-padding-h;
+		margin-left: -$popup-padding-h;
+		margin-right: -$popup-padding-h;
+	}
+}
+
+.popup-form {
+	max-width: 495px;
+
+	h4 {
+		margin-top: 0px !important;
+		margin-bottom: 15px;
+		padding-bottom: 10px;
+		font-size: 1.5rem;
+		line-height: 1.9rem;
+		text-align: center;
+		position: relative;
+
+		&:after {
+			@include pseudo-block(auto);
+			border-top: 1px solid $brand;
+			bottom: 0;
+			left: -$popup-padding-h;
+			right: -$popup-padding-h;
+
+			@media (max-width: $screen-xs-max){
+				$popup-padding-h: 20px;
+				left: -$popup-padding-h;
+				right: -$popup-padding-h;
+			}
+		}
+	}
+}
+
+.popup-simple {
+	padding: 26px 20px;
+	background-color: $white;
+}
+
+.mfp-close {
+	padding: 0;
+	cursor: pointer;
+	opacity: 1;
+
+	[class^=icon] {
+		width: 20px;
+		height: 20px;
+		fill: $brand;
+		transition: fill .2s ease;
+	}
+
+	&:before {
+		@include pseudo-block(100%);
+		top: 0;
+		right: 0;
+		z-index: 10;
+	}
+
+	&:hover [class^=icon] {
+		fill: $intense;
+	}
+
+	&:active {
+		top: 0;
+	}
+}
+
+.hide {
+	@include distancing(0 !important);
+}
+
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  transform: scale(0.9); 
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  transform: scale(1); 
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  transform: scale(0.9); 
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}

@@ -1,3 +1,6 @@
+$top-panel-bg: 						$major;
+
+
 .top-panel {
 	width: 100%;
 	padding-top: 12px;
@@ -6,10 +9,10 @@
 	top: 0;
 	left: 0;
 	z-index: 1000;
-	background-color: $major;
-	transform: translateY(calc(-100% - 4px));
-	transition: transform .3s ease;
-	box-shadow: 0 1px 3px rgba(24,24,24,.25);
+	background-color: $top-panel-bg;
+	@include transform(translateY(-100%));
+	@include transition(transform .3s ease, box-shadow .2s ease);
+	-webkit-transition: -webkit-transform .3s ease, -webkit-box-shadow .2s ease;
 	color: $white;
 
 	.form-control,
@@ -19,13 +22,21 @@
 	
 	&._show {
 		.top-panel-opener {
-			transform: translateY(0);
+			@include transform(translateY(0));
+		}
+	}
+
+	@media (max-width: $screen-sm-min){
+		&._show-xs {
+			@include transform(translateY(39px));
+			box-shadow: 0 1px 3px rgba(24,24,24,.25);
 		}
 	}
 
 	@media (min-width: $screen-sm-min) {
 		&._show {
-			transform: translateY(0);
+			@include transform(translateY(0));
+			box-shadow: 0 1px 3px rgba(24,24,24,.25);
 		}
 	}
 }
@@ -40,4 +51,35 @@
 		border-top: 1px solid darken($border, 23);
 		padding-top: 1rem;
 	}
+}
+
+.top-panel-opener-xs {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: $white;
+	padding: 10px 60px 10px 15px;
+	background-color: $top-panel-bg;
+	z-index: 1005;
+	@include transform(translateY(-100%));
+	@include transition(transform .3s ease, box-shadow .2s ease);
+	-webkit-transition: -webkit-transform .3s ease, -webkit-box-shadow .2s ease;
+
+	.icon-hamburger {
+		width: 36px;
+		height: 36px;
+		fill: $white;
+		position: absolute;
+		right: 12px;
+		top: 2px;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		&._show {
+			@include transform(translateY(0));
+			box-shadow: 0 1px 3px rgba(24,24,24,.25);
+		}
+	}
+
 }

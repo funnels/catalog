@@ -47,7 +47,7 @@
 		&:last-child {
 			border-left: 1px solid $border;
 			text-align: right;
-			padding: 0 15px 0 40px;
+			padding: 0 10px;
 			white-space: nowrap;
 		}
 
@@ -59,6 +59,14 @@
 	tr:hover {
 		td, th {
 			background-color: #f5f5f5;
+		}
+	}
+
+	@media (min-width: $screen-sm-min){
+		td {
+			&:last-child {
+				padding: 0 15px 0 40px;
+			}
 		}
 	}
 

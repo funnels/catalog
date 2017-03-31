@@ -116,18 +116,18 @@ $popup-brand-color: 			$brand;
 .my-mfp-zoom-in .zoom-anim-dialog {
   opacity: 0;
   transition: all .2s ease-in-out;
-  transform: scale(0.9); 
+  @include transform(scale(0.9)); 
 }
 
 /* animate in */
 .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
   opacity: 1;
-  transform: scale(1); 
+  @include transform(scale(1)); 
 }
 
 /* animate out */
 .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
-  transform: scale(0.9); 
+  @include transform(scale(0.9)); 
   opacity: 0;
 }
 

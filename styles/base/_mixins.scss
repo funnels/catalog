@@ -111,3 +111,10 @@
   border-spacing: 0;
   table-layout: $tbll;
 }
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+      -ms-transform: $transform; // IE9 only
+       -o-transform: $transform;
+          transform: $transform;
+}

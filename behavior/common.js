@@ -31,6 +31,7 @@ jQuery(document).ready(function() {
 	// fix panel
 	function fixPanel(){
 		var $panel = $('.top-panel')
+			, $panelOpenerXs = $('.top-panel-opener-xs')
 			, negativeIndent = parseInt($('.box.box-subheader').css('margin-top'))
 
 			, panelTop = $('.site-header').outerHeight(true) 
@@ -40,35 +41,51 @@ jQuery(document).ready(function() {
 			, panelTopXs = $('.site-header').outerHeight(true) 
 										+ $('.box.box-subheader').outerHeight(true)
 										- negativeIndent
-
-			, flagToggle = true
 			;
+		console.log( panelTop );
 
 		if ($(window).scrollTop() >= panelTop) {
 			$panel.addClass('_show');
-			if (flagToggle) {
-				$('.toggle-absolute').fadeIn();
-				flagToggle = false;  
-			}
 		} else {
 			$panel.removeClass('_show');
 		}
 
-		flagToggle = true;
-
 		if ($(window).scrollTop() >= panelTopXs) {
-			$panel.addClass('_show-xs');
-			if (flagToggle) {
-				$('.toggle-absolute').fadeIn();
-				flagToggle = false;  
-			}
+			$panel.addClass('_show');
+			$panelOpenerXs.addClass('_show');
 		} else {
-			$panel.removeClass('_show-xs');
+			$panel.removeClass('_show').removeClass('_show-xs');
+			$panelOpenerXs.removeClass('_show');
 		}
 	}
 
 	fixPanel();
 
+	// opens top panel on xs screen
+	$('.top-panel-opener-xs').each(function(){
+		var $this = $(this);
+
+		$this.on('close', function() {
+			$('.top-panel').removeClass('_show-xs');
+			return $('.nav-opener').removeClass('_show-xs');
+		});
+
+		$this.on('open', function() {
+			$('.top-panel').addClass('_show-xs');
+			return $('.nav-opener').addClass('_show-xs');
+		});
+		
+		$this.click(function(e){
+			e.preventDefault();
+
+			if ($('.top-panel').hasClass('_show-xs')){
+				$(this).triggerHandler('close');
+			} else {
+				$(this).triggerHandler('open');
+			}
+		});
+
+	});
 
 	// popup
 	$('.popup-link').magnificPopup({

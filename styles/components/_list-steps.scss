@@ -23,7 +23,7 @@ ol.list-steps {
 			  position: absolute;
 			  top: -55px;
 			  left: 50%;
-			  transform: rotate(90deg) translateY(25px);
+			  @include transform(rotate(90deg) translateY(25px));
     	}
     }
   }
@@ -35,7 +35,7 @@ ol.list-steps {
 			&:before {
 				top: 60px;
 			  left: -25px;
-			  transform: none;
+			  @include transform(none);
 			}
 		}
 	}
@@ -48,7 +48,7 @@ ol.list-steps {
 			&:before {
 				top: 0px;
 				left: 50%;
-				transform: rotate(135deg) translateY(-35px) translateX(-45px);
+				@include transform(rotate(135deg) translateY(-35px) translateX(-45px));
 			}
   	}
 	}

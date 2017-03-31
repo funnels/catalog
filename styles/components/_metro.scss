@@ -3,16 +3,18 @@ $metro-line-2-color:  				#6ee859;
 $metro-line-3-color:  				#2300f0;
 
 
-.metro-line-1-color {
-	color: $metro-line-1-color;
-}
+[class^=icon]{
+	&.metro-line-1-color {
+		background-color: $metro-line-1-color;
+	}
 
-.metro-line-2-color {
-	color: $metro-line-2-color;
-}
+	&.metro-line-2-color {
+		background-color: $metro-line-2-color;
+	}
 
-.metro-line-3-color {
-	color: $metro-line-3-color;
+	&.metro-line-3-color {
+		background-color: $metro-line-3-color;
+	}
 }
 
 .metro-list-small {
@@ -33,7 +35,7 @@ $metro-line-3-color:  				#2300f0;
 			@include pseudo-block(6px);
 			left: 0;
 			top: 50%;
-			transform: translateY(-50%);
+			@include transform(translateY(-50%));
 			border-radius: 6px;
 		}
 

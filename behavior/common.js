@@ -42,7 +42,6 @@ jQuery(document).ready(function() {
 										+ $('.box.box-subheader').outerHeight(true)
 										- negativeIndent
 			;
-		console.log( panelTop );
 
 		if ($(window).scrollTop() >= panelTop) {
 			$panel.addClass('_show');
@@ -66,13 +65,11 @@ jQuery(document).ready(function() {
 		var $this = $(this);
 
 		$this.on('close', function() {
-			$('.top-panel').removeClass('_show-xs');
-			return $('.nav-opener').removeClass('_show-xs');
+			return $('.top-panel').removeClass('_show-xs');
 		});
 
 		$this.on('open', function() {
-			$('.top-panel').addClass('_show-xs');
-			return $('.nav-opener').addClass('_show-xs');
+			return $('.top-panel').addClass('_show-xs');
 		});
 		
 		$this.click(function(e){
@@ -117,6 +114,15 @@ jQuery(document).ready(function() {
 		if (!$(e.target).parents().hasClass('dropdown') &&
 			$('.dropdown._open').length > 0 ) {
 			$('.dropdown').find('.trigger').trigger('forced_close');
+		}
+
+		// .top-panel
+		if (	(!$(e.target).parents().is('.top-panel')) &&
+					(!$(e.target).parents().is('.top-panel-opener-xs')) &&
+					(!$(e.target).is('.top-panel-opener-xs')) &&
+					$('.top-panel').hasClass('_show-xs')	){
+
+			$('.top-panel-opener-xs').triggerHandler('close');
 		}
 
 	});

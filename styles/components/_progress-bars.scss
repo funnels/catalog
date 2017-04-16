@@ -1,0 +1,16 @@
+$progress-height: 						12px;
+$progress-border-radius: 			6px;
+
+.progress {
+	height: $progress-height;
+	border-radius: $progress-border-radius;
+	@include distancing(1.2rem);
+	@include distancing(0, both, '.value');
+	@include box-shadow(none);
+}
+
+.progress-bar {
+	@include box-shadow(none);
+	font-size: 1.1rem;
+	line-height: 1.4rem;
+}

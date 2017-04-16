@@ -29,11 +29,12 @@
 
 	th {
 		padding-top: 8px;
+		padding-bottom: 3px;
 		font-weight: bold;
 	}
 
 	tr:first-child th {
-		padding-top: 0;
+		padding-top: 3px;
 	}
 
 	td {
@@ -70,6 +71,26 @@
 		}
 	}
 
+}
+
+.table-borders {
+	tr {
+
+		&:first-child {
+			td, th {
+				border-top: 1px solid $border;
+				padding-top: 8px;
+			}
+		}
+
+		&:last-child {
+			td, th {
+				border-bottom: 1px solid $border;
+				padding-bottom: 8px;
+			}
+		}
+
+	}
 }
 
 .table-borders-wrap {

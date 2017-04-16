@@ -193,6 +193,11 @@ ol,
 	}
 }
 
+dl {
+	@include distancing(1.2rem, top);
+	@include distancing(1.2rem, bottom);
+}
+
 .list-inline {
 	@include list-reset();
 

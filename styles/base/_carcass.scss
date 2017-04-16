@@ -13,8 +13,8 @@ body {
 	margin: 0;
 	font-family: $font-main;
 	color: $major;
-	font-size: 1.5rem;
-	line-height: 2rem;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
 	font-weight: $base-font-weight;
 	background-color: $bg;
 }
@@ -92,7 +92,7 @@ body {
 
 .content-area {
 	padding-top: 31px;
-	padding-bottom: 56px;	
+	padding-bottom: 31px;	
 }
 
 .pre-footer {

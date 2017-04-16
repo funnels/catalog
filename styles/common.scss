@@ -13,7 +13,9 @@
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/grid';
 @import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/forms';
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars';
 @import '../lib/magnific-popup/dist/magnific-popup.scss';
+@import '../lib/responsive-tabs/css/responsive-tabs';
 
 // base (after libs)
 @import 'base/normalize';
@@ -44,8 +46,10 @@
 @import 'components/phone';
 @import 'components/place';
 @import 'components/popup';
+@import 'components/progress-bars';
 @import 'components/rating';
 @import 'components/review';
 @import 'components/search';
+@import 'components/tabs';
 @import 'components/table';
 @import 'components/top-panel';

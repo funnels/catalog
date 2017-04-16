@@ -97,6 +97,18 @@ jQuery(document).ready(function() {
 		mainClass: 'my-mfp-zoom-in'
   });
 
+  // tabs
+  $('.tabs').responsiveTabs({
+		rotate: false,
+		startCollapsed: false,
+		collapsible: 'accordion',
+		setHash: true,
+		activate: function(event, tab){
+			google.maps.event.trigger(map1, 'resize');
+			google.maps.event.trigger(map2, 'resize');
+		}
+	});
+
 
 	// window scroll
 	$(window).scroll(function(){

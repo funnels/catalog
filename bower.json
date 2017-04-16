@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "responsive-tabs": "^1.6.2"
   }
 }

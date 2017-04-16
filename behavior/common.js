@@ -103,7 +103,7 @@ jQuery(document).ready(function() {
 		startCollapsed: false,
 		collapsible: true,
 		setHash: true,
-		scrollToAccordion: false,
+		scrollToAccordion: true,
 		activate: function(event, tab){
 			google.maps.event.trigger(map1, 'resize');
 			google.maps.event.trigger(map2, 'resize');

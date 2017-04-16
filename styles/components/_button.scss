@@ -133,6 +133,10 @@ $button-lg-font-size: 									2rem;
 	}
 }
 
+.btn-rounded {
+	border-radius: 50px;
+}
+
 
 .buttons-search {
 	@include clearfix();

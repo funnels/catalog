@@ -24,6 +24,7 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-corner-dims { width: 24px; height: 24px; }
 	.svg-hamburger-dims { width: 45px; height: 29px; }
 	.svg-like-dims { width: 67.8px; height: 67.8px; }
+	.svg-phone-3-dims { width: 1792px; height: 1792px; }
 	.svg-star-dims { width: 19px; height: 18px; }
 </style>
 <!--
@@ -52,7 +53,8 @@ for further details on how to create this embeddable sprite variant.
 		<symbol viewBox="0 0 24 24" id="corner"><path fill="#FBB040" d="M0 0l24 12L0 24z"/></symbol>
 		<symbol viewBox="0 0 45 29" id="hamburger"><g class="dsvg-menu-toggle"><path class="dbar" fill-rule="evenodd" clip-rule="evenodd" d="M39.5 3h-34C4.1 3 3 4.1 3 5.5S4.1 8 5.5 8h34C40.9 8 42 6.9 42 5.5S40.9 3 39.5 3zm0 9h-34C4.1 12 3 13.1 3 14.5S4.1 17 5.5 17h34c1.4 0 2.5-1.1 2.5-2.5S40.9 12 39.5 12zm0 9h-34C4.1 21 3 22.1 3 23.5S4.1 26 5.5 26h34c1.4 0 2.5-1.1 2.5-2.5S40.9 21 39.5 21z"/></g></symbol>
 		<symbol viewBox="0 0 67.8 67.8" id="like"><circle fill="#FAAF41" cx="33.9" cy="33.9" r="33.9"/><path d="M55.2 30.4c0-2.1-1.7-3.9-3.9-3.9H37.1c.7-3.3 2-10.3.4-13-2.2-3.8-5.1-2.3-5.1-2.3l-1 7s-2.6 7.7-5.6 9.2c-3 1.5-5.8 4.3-5.8 4.3v18.1s9.1 4.8 27.2 4.8c1.7 0 3.1-1.4 3.1-3.1 0-1.1-.6-2.1-1.5-2.7 2-.2 3.6-1.8 3.6-3.9 0-1.5-.8-2.8-2.1-3.4 1.9-.3 3.3-1.9 3.3-3.8 0-1.5-.8-2.7-2-3.4 2.1-.2 3.6-1.8 3.6-3.9zM12.5 50.5c0 .6.5 1.1 1.1 1.1h3.7c.6 0 1.1-.5 1.1-1.1V31.7c0-.6-.5-1.1-1.1-1.1h-3.7c-.6 0-1.1.5-1.1 1.1v18.8z" fill="#FFF"/></symbol>
-		<symbol preserveAspectRatio="xMidYMid" viewBox="0 0 19 18" id="star"><defs><style>.fcls-1{fill:#6e6e6e;fill-rule:evenodd}</style></defs><path d="M9.5 0l3.131 5.656 6.368 1.219-4.433 4.715.804 6.409-5.87-2.743-5.871 2.743.805-6.409L.001 6.875l6.368-1.219L9.5 0" class="fcls-1"/></symbol>
+		<symbol viewBox="0 0 1792 1792" id="phone-3"><path d="M1600 1240q0 27-10 70.5t-21 68.5q-21 50-122 106-94 51-186 51-27 0-52.5-3.5T1151 1520t-47.5-14.5-55.5-20.5-49-18q-98-35-175-83-128-79-264.5-215.5T344 904q-48-77-83-175-3-9-18-49t-20.5-55.5T208 577t-12.5-57.5T192 467q0-92 51-186 56-101 106-122 25-11 68.5-21t70.5-10q14 0 21 3 18 6 53 76 11 19 30 54t35 63.5 31 53.5q3 4 17.5 25t21.5 35.5 7 28.5q0 20-28.5 50t-62 55-62 53-28.5 46q0 9 5 22.5t8.5 20.5 14 24 11.5 19q76 137 174 235t235 174q2 1 19 11.5t24 14 20.5 8.5 22.5 5q18 0 46-28.5t53-62 55-62 50-28.5q14 0 28.5 7t35.5 21.5 25 17.5q25 15 53.5 31t63.5 35 54 30q70 35 76 53 3 7 3 21z"/></symbol>
+		<symbol preserveAspectRatio="xMidYMid" viewBox="0 0 19 18" id="star"><defs><style>.gcls-1{fill:#6e6e6e;fill-rule:evenodd}</style></defs><path d="M9.5 0l3.131 5.656 6.368 1.219-4.433 4.715.804 6.409-5.87-2.743-5.871 2.743.805-6.409L.001 6.875l6.368-1.219L9.5 0" class="gcls-1"/></symbol>
 </svg>
 
 <!--
@@ -136,6 +138,17 @@ embedded above. They may be styled via CSS.
 						
 					</div>
 					<h2>like</h2>
+				</li>
+				<li title="phone-3">
+					<div class="icon-box">
+						
+						<!-- phone-3 -->
+						<svg class="svg-phone-3-dims">
+							<use xlink:href="#phone-3"></use>
+						</svg>
+						
+					</div>
+					<h2>phone-3</h2>
 				</li>
 				<li title="star">
 					<div class="icon-box">
@@ -224,6 +237,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>like</h2>
 				</li>
+				<li title="phone-3">
+					<div class="icon-box">
+						
+						<!-- phone-3 -->
+						<svg class="svg-phone-3-dims">
+							<use xlink:href="icons-vector.svg#phone-3"></use>
+						</svg>
+						
+					</div>
+					<h2>phone-3</h2>
+				</li>
 				<li title="star">
 					<div class="icon-box">
 						
@@ -243,7 +267,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Sun, 16 Apr 2017 11:47:55 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Sun, 16 Apr 2017 11:58:10 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

@@ -101,8 +101,9 @@ jQuery(document).ready(function() {
   $('.tabs').responsiveTabs({
 		rotate: false,
 		startCollapsed: false,
-		collapsible: 'accordion',
+		collapsible: true,
 		setHash: true,
+		scrollToAccordion: false,
 		activate: function(event, tab){
 			google.maps.event.trigger(map1, 'resize');
 			google.maps.event.trigger(map2, 'resize');

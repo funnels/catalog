@@ -1,0 +1,13 @@
+$bottom-panel-bg: 				rgba(0,0,0,.7);
+
+
+.bottom-panel {
+	padding: 8px 15px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: $bottom-panel-bg;
+	text-align: center;
+	z-index: 900;
+}

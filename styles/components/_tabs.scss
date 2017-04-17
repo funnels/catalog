@@ -75,7 +75,7 @@ $tab-bg-active: 											$white;
 	}
 	
 	// phone
-	@media (max-width: $screen-xs-min) {
+	@media (max-width: $screen-xs-max) {
 		margin-left: -10px;
     margin-right: -10px;
 
